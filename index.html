@@ -1,78 +1,190 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#102a56">
-  <meta name="description" content="Website pribadi untuk menyimpan dan membagikan materi kuliah serta tugas Safi Adri Maulana.">
-  <title>Ruang Kuliah | Safi Adri Maulana</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kumpulan Tugas Kuliah | Muhammad Amin Ramdani</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 5px 0;
+            font-size: 1.1rem;
+            color: #ecf0f1;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: var(--secondary-color);
+            margin-top: 0;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .task-list li {
+            margin-bottom: 0.8rem;
+        }
+
+        .task-list a {
+            text-decoration: none;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .task-list a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        .task-list a::before {
+            content: '📄';
+            margin-right: 8px;
+            font-size: 0.9em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--secondary-color);
+            color: white;
+            margin-top: 3rem;
+        }
+    </style>
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="#"><span class="brand-mark">RK</span><span>Ruang Kuliah<small>Arsip materi & tugas</small></span></a>
-    <a class="github-link" href="https://github.com" target="_blank" rel="noreferrer">GitHub ↗</a>
-  </header>
 
-  <main class="container">
-    <section class="hero">
-      <div class="hero-copy">
-        <span class="eyebrow">WEBSITE PERKULIAHAN PRIBADI</span>
-        <h1>Semua materi dan tugas,<br><span>tersimpan rapi.</span></h1>
-        <p>Tempat mengarsipkan materi perkuliahan dan tugas agar mudah dibuka kembali dari laptop maupun HP.</p>
-        <a class="primary-link" href="#arsip">Lihat arsip <span>↓</span></a>
-      </div>
-      <div class="profile-card">
-        <div class="avatar">SA</div>
-        <div class="profile-label">DATA MAHASISWA</div>
-        <h2>Safi Adri Maulana</h2>
-        <div class="profile-row"><span>NIM</span><strong>240511147</strong></div>
-        <div class="profile-row"><span>Kelas</span><strong>TI24B</strong></div>
-        <div class="profile-row"><span>Prodi</span><strong>Teknik Informatika</strong></div>
-      </div>
-    </section>
+    <header>
+        <h1>Portal Tugas Kuliah</h1>
+        <p><strong>Muhammad Amin Ramdani</strong></p>
+        <p>NIM: 240511021 | Kelas: TI24B</p>
+        <p>Sistem Informasi & Ilmu Komputer</p>
+    </header>
 
-    <section class="stats" aria-label="Ringkasan arsip">
-      <div class="stat"><span class="stat-icon">▤</span><div><strong id="taskCount">—</strong><span>Arsip tugas</span></div></div>
-      <div class="stat"><span class="stat-icon">▧</span><div><strong id="materialCount">—</strong><span>Materi kuliah</span></div></div>
-      <div class="stat"><span class="stat-icon">☁</span><div><strong>GitHub</strong><span>Penyimpanan arsip</span></div></div>
-    </section>
+    <div class="container">
+        <h2>Daftar Mata Kuliah</h2>
+        
+        <div class="grid">
+            <!-- PBO -->
+            <div class="card">
+                <h3>Pemrograman Berorientasi Objek</h3>
+                <ul class="task-list">
+                    <li><a href="#">Tugas 1: Konsep Class & Object</a></li>
+                    <li><a href="#">Tugas 2: Inheritance & Polymorphism</a></li>
+                </ul>
+            </div>
 
-    <section class="section-heading" id="arsip">
-      <div><span class="eyebrow">KOLEKSI FILE</span><h2>Arsip perkuliahan</h2><p>File yang diunggah akan ditampilkan di sini agar bisa dilihat atau diunduh.</p></div>
-      <button class="outline-button" id="refreshBtn" type="button">↻ Muat ulang</button>
-    </section>
+            <!-- Struktur Data -->
+            <div class="card">
+                <h3>Struktur Data dan Algoritma</h3>
+                <ul class="task-list">
+                    <li><a href="#">Tugas 1: Implementasi Linked List</a></li>
+                    <li><a href="#">Tugas 2: Sorting & Searching</a></li>
+                </ul>
+            </div>
 
-    <div class="tabs" role="tablist" aria-label="Jenis arsip">
-      <button class="tab active" data-tab="tugas" role="tab" aria-selected="true">Tugas</button>
-      <button class="tab" data-tab="materi" role="tab" aria-selected="false">Materi kuliah</button>
+            <!-- Basis Data -->
+            <div class="card">
+                <h3>Sistem Basis Data</h3>
+                <ul class="task-list">
+                    <li><a href="#">Tugas 1: Normalisasi 1NF - 3NF</a></li>
+                    <li><a href="#">Tugas 2: Pemodelan DFD</a></li>
+                </ul>
+            </div>
+
+            <!-- Jarkom -->
+            <div class="card">
+                <h3>Jaringan Komputer</h3>
+                <ul class="task-list">
+                    <li><a href="#">Tugas 1: Topologi Jaringan</a></li>
+                    <li><a href="#">Tugas 2: Subnetting IPv4</a></li>
+                </ul>
+            </div>
+
+            <!-- Matematika Diskrit -->
+            <div class="card">
+                <h3>Matematika Diskrit</h3>
+                <ul class="task-list">
+                    <li><a href="#">Tugas 1: Logika & Himpunan</a></li>
+                    <li><a href="#">Tugas 2: Teori Graf</a></li>
+                </ul>
+            </div>
+
+            <!-- Statistika -->
+            <div class="card">
+                <h3>Statistika Terapan</h3>
+                <ul class="task-list">
+                    <li><a href="#">Tugas 1: Pengolahan Data Pandas</a></li>
+                    <li><a href="#">Tugas 2: Analisis Probabilitas</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="toolbar">
-      <label class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="Cari keterangan atau nama file..."></label>
-      <span id="resultLabel" class="result-label">Memuat arsip...</span>
-    </div>
-    <div id="fileList" class="file-grid" aria-live="polite"><div class="empty-state">Sedang memuat arsip…</div></div>
 
-    <section class="upload-section" id="unggah">
-      <div class="upload-intro">
-        <span class="eyebrow">AREA PENGELOLA</span>
-        <h2>Unggah file baru</h2>
-        <p>Masukkan kata sandi pengelola untuk mengunggah tugas atau materi. File akan disimpan ke repository GitHub yang sudah diatur.</p>
-        <div class="notice">Jangan masukkan token GitHub ke halaman website. Token hanya disimpan sebagai Environment Variable di Vercel.</div>
-      </div>
-      <form id="uploadForm" class="upload-card">
-        <label>Kata sandi pengelola<input id="adminPassword" type="password" autocomplete="current-password" placeholder="Kata sandi unggah" required></label>
-        <label>Jenis unggahan<select id="fileType" required><option value="tugas">Tugas</option><option value="materi">Materi kuliah</option></select></label>
-        <label>Keterangan tugas / materi<input id="description" type="text" maxlength="120" placeholder="Contoh: Tugas pertemuan 4" required></label>
-        <label>Pilih file<input id="fileInput" type="file" required></label>
-        <p class="file-help">Nama file akan dirapikan otomatis. Maksimum ukuran file mengikuti batas konfigurasi server; disarankan di bawah 5 MB.</p>
-        <button class="primary-button" id="uploadBtn" type="submit">Unggah ke arsip <span>↑</span></button>
-        <p id="uploadMessage" class="form-message" role="status"></p>
-      </form>
-    </section>
-  </main>
+    <footer>
+        <p>&copy; 2026 Muhammad Amin Ramdani. Dibangun dan di-hosting dengan GitHub Pages.</p>
+    </footer>
 
-  <footer><div class="footer-inner"><span>© <span id="year"></span> Safi Adri Maulana</span><span>Dibuat untuk arsip perkuliahan · TI24B</span></div></footer>
-  <script src="app.js"></script>
 </body>
 </html>
